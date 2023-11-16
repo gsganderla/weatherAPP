@@ -3,7 +3,7 @@ import Clock from "../components/clock";
 import Header from "../components/header";
 import Image from "../components/img";
 import Section from "../components/section";
-import Footer from "../footer";
+import Footer from "../components/footer";
 import { styles } from "./styles";
 
 
