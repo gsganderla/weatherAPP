@@ -1,11 +1,12 @@
 import { Text, View } from "react-native";
 import { styles } from "./styles";
 
-export default function Clock(){
+export default function Clock(props){
+
     return(
         <View style={styles.container}>
-           <Text style={styles.clockText}>00:00</Text>
-           <Text style={styles.weekendText}>Segunda-feira</Text>
+           <Text style={styles.clockText} >{props.eventHour}</Text>
+           <Text style={styles.weekendText}>{props.eventCidade}</Text>
         </View>
     )
 }
