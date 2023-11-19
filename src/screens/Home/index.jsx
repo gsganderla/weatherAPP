@@ -1,11 +1,11 @@
 import { Button, View } from "react-native";
-import Clock from "../components/clock";
-import Header from "../components/header";
-import Image from "../components/img";
-import Section from "../components/section";
-import Footer from "../components/footer";
+import City from "../../components/city";
+import Header from "../../components/header";
+import Image from "../../components/img";
+import Section from "../../components/section";
+import Footer from "../../components/footer";
 import { styles } from "./styles";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 
@@ -30,7 +30,6 @@ export default function Home(){
           console.log("Deu certo");
           console.log(response.data);
     
-          // Atualizando os estados
           setTemp(response.data.main.temp);
           setWeather(response.data.weather[0].description);
           setTempMin(response.data.main.temp_min);
@@ -46,11 +45,11 @@ export default function Home(){
 
         <View style={styles.container}>
             <Header cidadeValue={cidade} eventHandle={setCidade}/>
-            <Clock eventHour={city}></Clock>
+            <City eventHour={city}></City>
             <Image></Image>
             <Section eventDescricao={weather} eventTemperatura={temp} eventUmidade={umidade}></Section>
             <Footer eventTempMin={tempMin} eventTempMax={tempMax}></Footer>
-            <Button title="Obter Dados do Clima" onPress={obterDadosClima} />
+            <Button title="Obter Dados do Clima" onPress={obterDadosClima} style={styles.searchButton}/>
         </View>
     )
 }

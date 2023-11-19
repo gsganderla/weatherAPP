@@ -5,12 +5,8 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 15
     },
-    clockText:{
-        fontSize: 60,
-        color: '#FFFFFF'
-    },
-    weekendText: {
-        fontSize:20,
+    cityText:{
+        fontSize: 40,
         color: '#FFFFFF'
     }
   });
