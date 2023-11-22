@@ -15,4 +15,4 @@ export default function Section(props) {
             </View>
         </View>
     )
-}
+}  
