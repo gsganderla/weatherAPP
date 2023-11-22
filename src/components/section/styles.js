@@ -12,5 +12,10 @@ export const styles = StyleSheet.create({
     cardWeather: {
         fontSize:24,
         color: '#FFFFFF'
+    },
+    containerRow: {
+        alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-evenly"
     }
   });
