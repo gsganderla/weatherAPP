@@ -1,28 +1,26 @@
-import { Text, View, Image } from "react-native";
+import { View, Image } from "react-native";
 import { styles } from "./styles";
 
-export const images = {
-  weatherPics: {
-    'clear sky': require('../../../assets/clear.png'),
-    'few clouds': require('../../../assets/clouds.png'),
-    'scattered clouds': require('../../../assets/clouds.png'),
-    'broken clouds': require('../../../assets/clouds.png'),
-    'shower rain': require('../../../assets/rain.png'),
-    'rain': require('../../../assets/rain.png'),
-    'thunderstorm': require('../../../assets/rain.png'),
-    'snow': require('../../../assets/snow.png'),
-    'mist': require('../../../assets/mist.png'),
-  }
-}
+const weatherImages = [
+  { description: 'céu limpo', path: require('../../../assets/clear.png') },
+  { description: 'poucas nuvens', path: require('../../../assets/clouds.png') },
+  { description: 'chuva moderada', path: require('../../../assets/rain.png') },
+  { description: 'Nuvens dispersas', path: require('../../../assets/clouds.png') },
+  { description: 'nuvens quebradas', path: require('../../../assets/clouds.png') },
+  { description: 'chuva de chuveiro', path: require('../../../assets/rain.png') },
+  { description: 'chuva', path: require('../../../assets/rain.png') },
+  { description: 'tempestade', path: require('../../../assets/rain.png') },
+  { description: 'neve', path: require('../../../assets/snow.png') },
+  { description: 'névoa', path: require('../../../assets/mist.png') },
+]
 
 export default function Images(props) {
-  const weather = props.weather
-
-  console.log(images.weatherPics.weather);
-
+  const weather = weatherImages.filter(a => a.description === props.weather);
+  
+  if (weather && weather.length === 0) return null
   return (
     <View style={styles.container}>
-      <Image source={images.weatherPics.weather} />
+      <Image source={weather[0].path} />
     </View>
   )
 }
