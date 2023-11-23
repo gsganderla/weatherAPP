@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
     },
     cardTemperature: {
         fontSize:24,
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        paddingLeft: 15
     }
   });

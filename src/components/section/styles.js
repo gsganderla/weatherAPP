@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
         padding: 15
     },
     cardTemperature:{
-        fontSize: 90,
+        fontSize: 60,
         color: '#FFFFFF'
     },
     cardWeather: {
