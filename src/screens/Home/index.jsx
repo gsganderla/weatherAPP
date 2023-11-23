@@ -58,7 +58,6 @@ export default function Home() {
       <Images weather={weather}></Images>
       <Section eventDescricao={weather} eventTemperatura={temp} eventUmidade={umidade}></Section>
       <Footer eventTempMin={tempMin} eventTempMax={tempMax}></Footer>
-      <Button title="Obter Dados do Clima" onPress={obterDadosClima} style={styles.searchButton} />
     </View>
   )
 }
